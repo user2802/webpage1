@@ -1,0 +1,168 @@
+
+/* 
+
+
+* jQuery 3.6.0 (https://jquery.com/)
+* Licensed under MIT (https://github.com/jquery/jquery/blob/main/LICENSE.txt)
+
+* Parts of the code used for styling and form this page comes from https://www.codingnepalweb.com/login-signup-form-using-php-mysql/
+  
+
+Links about flexbox and more:
+Link: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
+
+Very good link on how flexbox works 
+Link1: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+Links on how to divide a page (padding, margin, flex etc.):
+Link: https://css-tricks.com/boxes-fill-height-dont-squish/
+Link1: https://stackoverflow.com/questions/37431563/flexbox-body-and-main-min-height
+Link2: http://bl.ocks.org/jfsiii/5380802
+
+
+Very strong inspiration to flexbox sub-layout. An interactive website where 
+you can test different flex-box layouts 
+Link: https://flexbox.help/
+*/
+
+
+
+.menu{
+    display: flex;
+    /*align-items: center;*/
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 10px;
+    height: 50px;
+    margin-bottom: 10px;
+    /* makes the elements not overlap, like the table and the "menu" button
+    Link: https://www.samanthaming.com/tidbits/95-fix-text-overlap-with-css-white-space/*/
+    
+    
+}
+/* changing the appearance of the calender to the same as the "select" element.
+The CSS code can be found when inspecting the "selector" element */
+.dateRange{
+  border: 1px solid #ced4da;
+  border-top-color: rgb(206, 212, 218);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-right-color: rgb(206, 212, 218);
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-bottom-color: rgb(206, 212, 218);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: rgb(206, 212, 218);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+
+}
+
+/* "form-selector" is the form list (class name can be found in inspector mode)
+by changing the padding of the "selector" element the dropdown will have the same
+size as the calender*/
+.form-selector{
+    padding:0;
+}
+.col00{
+    display: flex;
+    max-width: 200px;
+    max-height: 50px;
+    
+}
+.col01{
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    max-height: 50px;
+    margin-left: 5px;
+    
+}
+
+
+.row1 {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	align-content: stretch;
+    
+}
+.col10 {
+    /*display: flex;*/
+    min-height: 45%;
+    min-width: 45%;
+}
+.col11 {
+    /*display: flex;*/
+    min-height: 45%;
+    min-width: 45%;
+}
+
+.row2 {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: stretch;
+    
+}
+
+.col20 {
+    /*display: flex;*/
+    min-height: 45%;
+    min-width: 30%;
+}
+/* "colxx" contains the card with mean speed etc.
+"postion:relative" and "margin" makes it so the card 
+elements don't clip and hide titles from the 
+figures*/
+.col21 {
+    /*display: flex;*/
+    min-height: 45%;
+    min-width: 30%;
+    position:relative;
+    margin-left: 200px;
+}
+
+.col22 {
+    /*display: flex;*/
+    min-height: 45%;
+    min-width: 30%;
+}
+
+.row3 {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: flex-end;
+	align-content: stretch;
+    margin-top: 20px;
+}
+
+.col30 {
+    /*display: flex;*/
+    min-height: 45%;
+    min-width: 45%;
+}
+
+/*add margin to prevent the figures on "row3" 
+(i.e. "col30" and "col31") clipping*/
+.col31 {
+    /*display: flex;*/
+    min-height: 45%;
+    min-width: 45%;
+    margin-left: 200px;
+}
